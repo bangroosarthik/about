@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0,0,5,black; 
+    background: linear-gradient(-45deg,white,purple,yellow,pink);
+    background-size: 500% 500%;
+    animation: gradient 15s ease infinite;
+    height:100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    
+
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 30px 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card:hover{
+    height:250px ;
+
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform:translateY(-150px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover >.imgbox{
+    transform: translateY(-90px);
+    opacity: 1;
+}
+img{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+
+.contentbox{
+    
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-480px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.contentbox > p{
+    color:grey;
+}
+.card:hover >.contentbox{
+    opacity: 1;
+    transform: translateY(-90px);
+}
